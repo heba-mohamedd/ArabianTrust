@@ -1,0 +1,82 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+const textContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const textItem = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
+
+export default function Hero() {
+  return (
+    <section className="relative h-125 md:h-150 w-full overflow-hidden font-sans">
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url('src/assets/c142ba00b5a85693796f1962ee5405f314913329.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
+      <motion.div
+        className="absolute inset-0 transform scale-y-[-1]"
+        initial={{ opacity: 0, y: 60 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
+        <div
+          className="absolute inset-0 bg-[#00963F] opacity-20"
+          style={{
+            clipPath: "polygon(45% 0, 100% 0, 100% 100%, 60% 100%)",
+          }}
+        />
+
+        <div
+          className="absolute inset-0 bg-[#00963F] opacity-20"
+          style={{
+            clipPath: "polygon(50% 0, 100% 0, 100% 100%, 65% 100%)",
+            transform: "translateX(30px)",
+          }}
+        />
+      </motion.div>
+
+      <motion.div
+        className="relative z-20 container mx-auto h-full flex flex-col justify-center items-end px-6 md:px-20 text-white text-right"
+        variants={textContainer}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="max-w-2xl">
+          <motion.h1
+            variants={textItem}
+            className="text-2xl md:text-5xl font-bold mb-6 leading-tight"
+          >
+            حلول متكاملة لإدارة وتشغيل <br />
+            المرافق والأنظمة
+          </motion.h1>
+
+          <motion.p
+            variants={textItem}
+            className="text-lg md:text-xl font-light leading-relaxed opacity-90"
+          >
+            نقدم خدمات متخصصة تشمل إدارة المرافق، تكامل الأنظمة، التشغيل
+            <br className="hidden md:block" />
+            والصيانة، وفق أعلى المعايير المعتمدة في المملكة.
+          </motion.p>
+        </div>
+      </motion.div>
+
+      <div className="absolute inset-0 z-0 bg-blue-900/10 pointer-events-none"></div>
+    </section>
+  );
+}
