@@ -3,7 +3,7 @@ import Title from "../Components/ui/Title";
 import ServiseCard from "../Components/ui/ServiseCard";
 import Header from "../Components/ui/Header";
 import { service } from "../constant/constant";
-
+import ImageDivider from "../assets/Group 1 (1).png";
 export default function Sectors() {
   return (
     <section
@@ -33,7 +33,7 @@ export default function Sectors() {
           <br /> فرق متخصصة لكل قطاع وفق أفضل الممارسات.{" "}
         </Header>
 
-        <img src="src/assets/Group 1 (1).png" alt="" className="scale-70" />
+        <img src={ImageDivider} alt="" className="scale-70" />
       </div>
     </section>
   );
