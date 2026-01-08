@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import heroBg from "../assets/c142ba00b5a85693796f1962ee5405f314913329.jpg";
 
 const textContainer = {
   hidden: {},
@@ -21,7 +22,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url('src/assets/c142ba00b5a85693796f1962ee5405f314913329.jpg')`,
+          backgroundImage: `url(${heroBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

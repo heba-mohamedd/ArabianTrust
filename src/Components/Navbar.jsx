@@ -2,6 +2,7 @@ import React from "react";
 import { Dropdown, Space } from "antd";
 import { GlobalOutlined, DownOutlined } from "@ant-design/icons";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/Logo.png";
 
 const Navbar = () => {
   const items = [
@@ -24,11 +25,7 @@ const Navbar = () => {
       dir="rtl"
     >
       <div className="shrink-0">
-        <img
-          src="src/assets/Logo.png"
-          alt="Thibat Logo"
-          className="h-15 w-25"
-        />
+        <img src={logo} alt="Thibat Logo" className="h-15 w-25" />
       </div>
 
       <ul className="hidden lg:flex items-center gap-6 text-gray-700 font-medium">

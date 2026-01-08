@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "../assets/c142ba00b5a85693796f1962ee5405f314913329.jpg";
 
 export default function About() {
   // إعدادات ظهور العناصر (Animations)
@@ -60,7 +61,7 @@ export default function About() {
           >
             <div className="relative h-[500px] w-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
               <img
-                src="src/assets/c142ba00b5a85693796f1962ee5405f314913329.jpg"
+                src={Image}
                 alt="About Thibat"
                 className="w-full h-auto object-cover"
               />
