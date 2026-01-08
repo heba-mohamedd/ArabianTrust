@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { IoAlbumsOutline } from "react-icons/io5";
-import { TbTransformPointTopLeft } from "react-icons/tb";
-
+import footerimage from "../assets/236627169d5a53522a3134e218015a0810d64acb.png";
 export default function Footer() {
   const [isOpened, setIsOpend] = useState(true);
   return (
@@ -20,11 +19,7 @@ export default function Footer() {
       </div>
       {isOpened && (
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 py-10">
-          <img
-            src="src/assets/236627169d5a53522a3134e218015a0810d64acb.png"
-            alt="logo"
-            className="w-full max-w-[250px]"
-          />
+          <img src={footerimage} alt="logo" className="w-full max-w-[250px]" />
 
           <div>
             <div className="text-2xl mb-4 text-[#00963F] flex items-center gap-2">
