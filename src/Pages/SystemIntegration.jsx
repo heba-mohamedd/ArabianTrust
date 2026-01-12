@@ -9,7 +9,7 @@ import RequestQuote from "../Components/RequestQuote";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import BMSSection from "../Components/BMSSection";
 import ServicesMindMap from "../Components/ServicesMindMap";
-
+import GraphFlow from "../Components/GraphFlow.jsx";
 const FeatureItem = ({ text }) => (
   <div className="flex items-start h-[30%] py-10 bg-neutral-200 rounded-xl  ">
     <LuDot className="shrink-0" size={24} />
@@ -34,54 +34,54 @@ export default function SystemIntegration() {
       transition={{ duration: 0.8 }}
     >
       <Title title="خدمات تكامل الانظمة" />
-      <div className="container max-w-6xl mx-auto px-4">
+      <div className="container max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <div className="mt-8  rounded-3xl overflow-hidden  flex flex-col items-center justify-center ">
             <Header
               title="حلول تكامل الأنظمة المتطورة"
               description="نقدم حلول تكامل أنظمة متقدمة تربط بين التقنيات المختلفة داخل منشآتكم، لضمان تشغيل ذكي، آمن، ومستدام وفق أعلى المعايير المعتمدة."
             />
+            <div className="relative mx-auto w-[80%]  ">
+              <img src={systemIntegrationImage} alt="System Integration" />
+            </div>
 
-            <img src={systemIntegrationImage} alt="System Integration" />
-            {/* <ServicesMindMap /> */}
+            {/* <GraphFlow /> */}
           </div>
         </div>
 
-        <div>
-          <div className=" mx-auto px-4">
-            {/* Header */}
+        <div className="">
+          {/* Header */}
 
-            <Header title="أنظمة المراقبة والكاميرات الأمنية" />
+          <Header title="أنظمة المراقبة والكاميرات الأمنية" />
 
-            {/* Content */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center mt-5">
-              {/* Right List */}
-              <div className="order-2 lg:order-1 space-y-4">
-                {surveillanceFeatures.slice(0, 2).map((feature, index) => (
-                  <FeatureItem key={index} text={feature} />
-                ))}
-              </div>
+          {/* Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 items-center mt-5">
+            {/* Right List */}
+            <div className="order-2 lg:order-1 space-y-4">
+              {surveillanceFeatures.slice(0, 2).map((feature, index) => (
+                <FeatureItem key={index} text={feature} />
+              ))}
+            </div>
 
-              {/* Image */}
-              <div className="order-1 lg:order-2 flex justify-center">
-                <img
-                  src={cameraImage}
-                  alt="Security Camera"
-                  className="
+            {/* Image */}
+            <div className="order-1 lg:order-2 flex justify-center">
+              <img
+                src={cameraImage}
+                alt="Security Camera"
+                className="
             w-56 sm:w-64 md:w-82
             drop-shadow-2xl
             transition-transform duration-300
             
           "
-                />
-              </div>
+              />
+            </div>
 
-              {/* Left List */}
-              <div className="order-3 space-y-4">
-                {surveillanceFeatures.slice(2, 4).map((feature, index) => (
-                  <FeatureItem key={index} text={feature} />
-                ))}
-              </div>
+            {/* Left List */}
+            <div className="order-3 space-y-4">
+              {surveillanceFeatures.slice(2, 4).map((feature, index) => (
+                <FeatureItem key={index} text={feature} />
+              ))}
             </div>
           </div>
         </div>

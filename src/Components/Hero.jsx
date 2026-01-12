@@ -18,7 +18,7 @@ const textItem = {
 
 const Hero = React.memo(function Hero() {
   return (
-    <section className="relative h-80 sm:h-96 md:h-125 lg:h-150 w-full overflow-hidden font-sans">
+    <section className="relative h-80 sm:h-96 md:h-125 w-full overflow-hidden font-sans">
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -37,14 +37,14 @@ const Hero = React.memo(function Hero() {
         style={{ willChange: "opacity, transform" }}
       >
         <div
-          className="absolute inset-0 bg-[#00963F] opacity-20"
+          className="absolute inset-0 bg-primary opacity-20"
           style={{
             clipPath: "polygon(45% 0, 100% 0, 100% 100%, 60% 100%)",
           }}
         />
 
         <div
-          className="absolute inset-0 bg-[#00963F] opacity-20"
+          className="absolute inset-0 bg-primary opacity-20"
           style={{
             clipPath: "polygon(50% 0, 100% 0, 100% 100%, 65% 100%)",
             transform: "translateX(30px)",

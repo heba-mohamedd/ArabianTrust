@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Dropdown, Space } from "antd";
 import { GlobalOutlined, DownOutlined } from "@ant-design/icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "/Logo.png";
 import { LuDot } from "react-icons/lu";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isClick, setIsClick] = useState("الرئيسية");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const items = [
@@ -31,9 +32,10 @@ const Navbar = () => {
     >
       <div className="shrink-0">
         <img
+          onClick={() => navigate("/")}
           src={logo}
           alt="Thibat Logo"
-          className="h-12 md:h-15 w-20 md:w-25"
+          className="h-12 md:h-15 w-20 md:w-25  cursor-pointer"
         />
       </div>
 

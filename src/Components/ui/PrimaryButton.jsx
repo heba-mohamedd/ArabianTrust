@@ -6,21 +6,26 @@ export default function PrimaryButton({
   onClick,
   className,
   style,
+  htmlType = "button",
 }) {
   return (
     <Button
       type="primary"
       size="large"
-      className={`flex items-center gap-2 mx-auto ${className}`}
+      htmlType={htmlType}
+      className={`flex items-center gap-2 ${className}`}
       style={{
         backgroundColor: "#00963F",
         borderColor: "#00963F",
+        height: "auto",
         ...style,
       }}
       onClick={onClick}
     >
-      {icon}
-      {text}
+      <span className="flex items-center gap-2 py-2 px-4">
+        {icon}
+        {text}
+      </span>
     </Button>
   );
 }

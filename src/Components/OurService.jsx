@@ -16,7 +16,7 @@ const containerVariants = {
 const OurService = React.memo(function OurService() {
   return (
     <section
-      className="container  max-w-7xl py-12 md:py-16 lg:py-20 overflow-hidden mx-auto"
+      className="container max-w-7xl py-6 overflow-hidden mx-auto"
       dir="rtl"
     >
       <div className="flex flex-col justify-center items-center px-4 sm:px-6 md:px-0">
@@ -37,7 +37,7 @@ const OurService = React.memo(function OurService() {
           initial="hidden"
           animate="visible"
         >
-          {service.map((item) => (
+          {service.slice(0, 3).map((item) => (
             <ServiceCard item={item} key={item.id} />
           ))}
         </motion.div>

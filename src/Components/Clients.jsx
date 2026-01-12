@@ -21,7 +21,7 @@ const Clients = React.memo(function Clients() {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 overflow-hidden" dir="rtl">
+    <section className=" overflow-hidden" dir="rtl">
       <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -42,17 +42,40 @@ const Clients = React.memo(function Clients() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mt-8 md:mt-12 justify-items-center"
+          className=" flex flex-col mt-2"
         >
-          {logos.map((img, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-            >
-              <img src={img} alt="logos" loading="lazy" />
-            </motion.div>
-          ))}
+          <div className=" flex flex-wrap md:flex-row justify-around items-center md:ms-10">
+            {logos.slice(0, 4).map((img, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="w-32 sm:w-40 md:w-48  lg:w-56 flex items-center justify-center"
+              >
+                <img
+                  src={img}
+                  alt={`logo-${index}`}
+                  loading="lazy"
+                  className="w-full h-30 md:h-24 object-contain"
+                />
+              </motion.div>
+            ))}
+          </div>
+          <div className=" flex flex-wrap md:flex-row justify-around items-center md:ml-10">
+            {logos.slice(4).map((img, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="w-32 sm:w-40 md:w-48 lg:w-56 flex items-center justify-center"
+              >
+                <img
+                  src={img}
+                  alt={`logo-${index}`}
+                  loading="lazy"
+                  className="w-full h-20 md:h-24 object-contain"
+                />
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

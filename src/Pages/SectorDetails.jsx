@@ -6,7 +6,6 @@ import Title from "../Components/ui/Title";
 import Header from "../Components/ui/Header";
 import PrimaryButton from "../Components/ui/PrimaryButton";
 import RequestQuote from "../Components/RequestQuote";
-import frame11 from "../assets/Frame 11.png";
 
 export default function SectorDetails() {
   const { id } = useParams();
@@ -26,10 +25,16 @@ export default function SectorDetails() {
 
       <div className="container max-w-6xl mx-auto px-6 flex flex-col items-center my-10">
         {/* Image */}
-        <img src={frame11} alt={sector.title} />
+        <div className="w-[70%] ">
+          <img
+            src={sector.src}
+            alt={sector.title}
+            className="w-full h-auto max-h-[400px] object-contain"
+          />
+        </div>
 
         {/* Header */}
-        <div className="w-full text-center space-y-6 mb-12">
+        <div className="w-full text-center space-y-6 mb-12 mt-6">
           <Header title={sector.title} description={sector.description} />
 
           <div className="flex justify-center">
@@ -51,7 +56,7 @@ export default function SectorDetails() {
           </div>
         </div>
         <div className=" mb-10 w-full">
-          <p className=" text-center my-10 text-2xl text-[#00963F]">
+          <p className=" text-center my-10 text-2xl text-primary">
             منهجيتنا في تشغيل وصيانة محطات التحلية
           </p>
           <StepsList />

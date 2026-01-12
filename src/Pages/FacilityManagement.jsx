@@ -26,6 +26,16 @@ const services = [
     description:
       "تركيب وصيانة أنظمة التسخين والتبريد بكفاءة عالية، بما يضمن التشغيل المستمر وتوفير الطاقة.",
   },
+  {
+    title: "أنظمة التدفئة والتهوية وتكييف الهواء (HVAC): ",
+    description:
+      "تصميم وتوريد وتركيب أنظمة متكاملة لتكييف الهواء، تضمن تحسين جودة الهواء الداخلي ورفع مستوى الراحة الحرارية داخل المباني.",
+  },
+  {
+    title: "السخانات والمبردات: ",
+    description:
+      "تركيب وصيانة أنظمة التسخين والتبريد بكفاءة عالية، بما يضمن التشغيل المستمر وتوفير الطاقة.",
+  },
 ];
 
 const categories = [
@@ -72,7 +82,7 @@ export default function FacilityManagement() {
     >
       <Title title="إدارة المرافق" />
 
-      <div className="max-w-6xl mx-auto px-4 mt-12">
+      <div className="max-w-7xl mx-auto px-4 mt-12">
         {/* Intro */}
         <IntroSection />
 

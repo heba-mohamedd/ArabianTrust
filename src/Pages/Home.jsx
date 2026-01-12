@@ -7,13 +7,17 @@ import Clients from "../Components/Clients";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 
 export default function Home() {
+  function handleClick() {
+    console.log("home");
+  }
   return (
-    <div>
+    <section className="flex flex-col items-center">
       <Hero />
       <About />
       <OurService />
       <Statistics />
       <RequestQuote
+        onClick={handleClick}
         title="تقديم طلب عرض سعر"
         description={`من خلال نموذج طلب عرض السعر، يمكنكم مشاركة متطلباتكم الفنية والتشغيلية
         \n ليقوم فريقنا بدراستها وإعداد عرض سعر متكامل`}
@@ -21,6 +25,6 @@ export default function Home() {
         buttonIcon={<MdOutlinePhoneInTalk size={20} />}
       />
       <Clients />
-    </div>
+    </section>
   );
 }

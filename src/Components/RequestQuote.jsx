@@ -6,6 +6,7 @@ export default function RequestQuote({
   description = "",
   buttonText,
   buttonIcon,
+  onClick,
 }) {
   return (
     <section className="container mx-auto my-10 px-4">
@@ -48,7 +49,11 @@ export default function RequestQuote({
 
           {buttonText && (
             <div className="mt-6">
-              <PrimaryButton text={buttonText} icon={buttonIcon} />
+              <PrimaryButton
+                text={buttonText}
+                icon={buttonIcon}
+                onClick={onClick}
+              />
             </div>
           )}
         </div>

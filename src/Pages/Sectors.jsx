@@ -16,7 +16,7 @@ export default function Sectors() {
       {/* Page Title */}
       <Title title="القطاعات" />
 
-      <div className="container mx-auto max-w-7xl flex flex-col items-center gap-12">
+      <div className="container mx-auto max-w-7xl flex flex-col items-center gap-12 my-6 ">
         {/* Section Header */}
         <Header
           title="قطاعات أعمالنا"
@@ -27,7 +27,7 @@ export default function Sectors() {
         />
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-7 md:gap-15 ">
           {service.map((item) => (
             <ServiceCard key={item.id} item={item} />
           ))}
@@ -39,11 +39,14 @@ export default function Sectors() {
             description=" نعتمد على نموذج تشغيلي موحد يضمن الكفاءة والجودة في إدارة جميع
             قطاعاتنا، مع تخصيص فرق متخصصة لكل قطاع وفق أفضل الممارسات."
           />
-          <img
-            src={ImageDivider}
-            alt="نموذج إدارة العمل"
-            className="scale-75 "
-          />
+
+          <div className="w-[70%]  mb-10">
+            <img
+              src={ImageDivider}
+              alt="نموذج إدارة العمل"
+              className="w-full h-auto max-h-[400px] object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>
