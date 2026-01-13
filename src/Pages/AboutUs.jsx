@@ -8,6 +8,7 @@ import FeatureCard from "../Components/FeatureCard.jsx";
 import { LuMessageSquareMore, LuMessagesSquare } from "react-icons/lu";
 import ImageDivider from "../assets/Group 1 (1).png";
 import bottomImge from "../assets/bottomImage.png";
+import ModernProcess from "../Components/ModernProcess.jsx";
 export default function AboutUs() {
   return (
     <motion.section
@@ -63,11 +64,7 @@ export default function AboutUs() {
             description="نعتمد على نموذج تشغيلي موحد يتيح لنا إدارة قطاعات متعددة بكفاءة عالية، من خلال إدارة مركزية وفرق متخصصة لكل قطاع، مع تطبيق إجراءات تشغيل قياسية ومؤشرات أداء واضحة."
             titleColor="text-black"
           />
-          <img
-            src={ImageDivider}
-            alt="نموذج إدارة العمل"
-            className="scale-75 "
-          />
+          <ModernProcess />
         </div>
       </div>
       <div className="w-full">
