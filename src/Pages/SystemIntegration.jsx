@@ -8,8 +8,9 @@ import cameraImage from "../assets/cameraImage.png";
 import RequestQuote from "../Components/RequestQuote";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import BMSSection from "../Components/BMSSection";
-import ServicesMindMap from "../Components/ServicesMindMap";
-import GraphFlow from "../Components/GraphFlow.jsx";
+
+import SmartSystemMap from "../Components/GraphFlow.jsx";
+
 const FeatureItem = ({ text }) => (
   <div className="flex items-start h-[30%] py-10 bg-neutral-200 rounded-xl  ">
     <LuDot className="shrink-0" size={24} />
@@ -41,12 +42,13 @@ export default function SystemIntegration() {
               title="حلول تكامل الأنظمة المتطورة"
               description="نقدم حلول تكامل أنظمة متقدمة تربط بين التقنيات المختلفة داخل منشآتكم، لضمان تشغيل ذكي، آمن، ومستدام وفق أعلى المعايير المعتمدة."
             />
-            <div className="relative mx-auto w-[80%]  ">
-              <img src={systemIntegrationImage} alt="System Integration" />
-            </div>
-
-            {/* <GraphFlow /> */}
           </div>
+
+          <div className="relative mx-auto w-[80%]  ">
+            <img src={systemIntegrationImage} alt="System Integration" />
+          </div>
+
+          {/* <SmartSystemMap /> */}
         </div>
 
         <div className="">
@@ -55,7 +57,7 @@ export default function SystemIntegration() {
           <Header title="أنظمة المراقبة والكاميرات الأمنية" />
 
           {/* Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 items-center mt-5">
+          <div className="grid grid-cols-1 lg:grid-cols-3 items-center mt-5 gap-4 md:gap:0">
             {/* Right List */}
             <div className="order-2 lg:order-1 space-y-4">
               {surveillanceFeatures.slice(0, 2).map((feature, index) => (

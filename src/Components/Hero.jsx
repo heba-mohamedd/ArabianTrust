@@ -53,7 +53,7 @@ const Hero = React.memo(function Hero() {
       </motion.div>
 
       <motion.div
-        className="relative z-20 container mx-auto h-full flex flex-col justify-center items-end px-4 sm:px-6 md:px-12 lg:px-20 text-white text-right"
+        className="relative z-20 container mx-auto h-full flex flex-col justify-center items-end text-white text-right"
         variants={textContainer}
         initial="hidden"
         animate="visible"

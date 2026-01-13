@@ -41,13 +41,6 @@ export default function Sectors() {
             قطاعاتنا، مع تخصيص فرق متخصصة لكل قطاع وفق أفضل الممارسات."
           />
 
-          {/* <div className="w-[70%]  mb-10">
-            <img
-              src={ImageDivider}
-              alt="نموذج إدارة العمل"
-              className="w-full h-auto max-h-[400px] object-contain"
-            />
-          </div> */}
           <ModernProcess />
         </div>
       </div>

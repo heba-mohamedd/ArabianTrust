@@ -106,7 +106,7 @@ function FinancialCard({ title, description }) {
       whileHover={{ y: -6 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className="bg-neutral-200  rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+      className="bg-neutral/10 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
     >
       <p
         className="flex items-center 

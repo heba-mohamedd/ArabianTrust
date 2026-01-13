@@ -16,7 +16,7 @@ const containerVariants = {
 const OurService = React.memo(function OurService() {
   return (
     <section
-      className="container max-w-7xl py-6 overflow-hidden mx-auto"
+      className="container max-w-7xl py-6 overflow-hidden mx-auto my-5"
       dir="rtl"
     >
       <div className="flex flex-col justify-center items-center px-4 sm:px-6 md:px-0">
@@ -32,7 +32,7 @@ const OurService = React.memo(function OurService() {
 
       <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 items-center"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-7 md:gap-15 "
           variants={containerVariants}
           initial="hidden"
           animate="visible"

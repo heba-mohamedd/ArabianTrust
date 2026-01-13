@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "../assets/bms-main.jpg";
+import Image from "../assets/Subtract.png";
+import { IoPlayCircleOutline } from "react-icons/io5";
 
 export default function About() {
   const fadeInRight = {
@@ -60,38 +61,31 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInLeft}
-          className="relative flex justify-center"
+          className="relative flex justify-center mx-auto w-full max-w-md lg:max-w-lg overflow-hidden rounded-2xl"
         >
-          <div className="relative h-80 sm:h-96 md:h-100 md:w-[500px] w-full max-w-sm rounded-[2rem] overflow-hidden shadow-2xl">
-            <img
-              src={Image}
-              alt="About Thibat"
-              className="w-full h-full object-cover"
-            />
+          <img
+            src={Image}
+            alt="About Thibat"
+            className="w-full h-auto object-cover"
+          />
 
-            <div className="absolute bottom-0 right-0 w-20 w-24  h-20 5 bg-white rounded-tl-[3rem] flex items-center justify-center">
-              <div className="w-12 h-12   bg-primary text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer hover:scale-110 transition-transform">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6 "
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z"
-                  />
-                </svg>
-              </div>
-            </div>
+          {/* Play Icon */}
+          <div
+            className="
+      absolute 
+      bottom-0 right-2 
+      w-19 h-19 
+      bg-primary 
+      rounded-full 
+      flex items-center justify-center 
+      cursor-pointer 
+      hover:scale-110 
+      active:scale-95
+      transition-all
+      shadow-lg
+    "
+          >
+            <IoPlayCircleOutline className="text-white " size={40} />
           </div>
         </motion.div>
       </div>

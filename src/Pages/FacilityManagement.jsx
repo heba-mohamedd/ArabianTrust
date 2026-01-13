@@ -196,7 +196,7 @@ const CategoriesGrid = () => (
     {categories.map((category, index) => (
       <div
         key={index}
-        className="bg-white p-5 rounded-xl hover:shadow-md transition"
+        className="bg-neutral/10 p-5 rounded-xl hover:shadow-md transition"
       >
         <div className="flex items-start gap-2 mb-3">
           <LuDot className="shrink-0 mt-1" size={22} />
