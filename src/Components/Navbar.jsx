@@ -36,19 +36,21 @@ const Navbar = () => {
 
   return (
     <nav
-      className="flex items-center justify-between bg-white h-16 md:h-20 shadow-sm"
+      className="flex items-center justify-between bg-white h-16 md:h-20 shadow-sm "
       dir="rtl"
     >
-      <div className="shrink-0 order-1">
+      {/* Logo */}
+      <div className="shrink-0 w-20 h-20">
         <img
           onClick={() => navigate("/")}
           src={logo}
           alt="Thibat Logo"
-          className="h-12 md:h-15 w-20 md:w-25 cursor-pointer"
+          className="h-12 md:h-16 w-auto cursor-pointer"
         />
       </div>
 
-      <ul className="hidden order-2 lg:flex items-center gap-4 xl:gap-6 text-dark-grey font-medium text-sm xl:text-base">
+      {/* Desktop Navigation Menu */}
+      <ul className="hidden lg:flex items-center gap-4 xl:gap-6 text-dark-grey font-medium text-sm xl:text-base">
         {navLinks.map((link, index) => (
           <li key={index} className="flex items-center gap-2">
             <NavLink
@@ -64,16 +66,19 @@ const Navbar = () => {
         ))}
       </ul>
 
+      {/* Mobile Menu Button */}
       <button
-        className="lg:hidden text-2xl text-dark-grey order-2"
+        className="lg:hidden text-2xl text-dark-grey hover:text-primary transition-colors px-4"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        aria-label="Toggle menu"
       >
         ☰
       </button>
 
-      <div className="relative flex items-center h-full order-3">
+      {/* Language Selector (Desktop) */}
+      <div className="relative hidden lg:flex items-center h-full">
         <div
-          className="bg-[#009640] hidden md:flex items-center px-4 md:px-8 h-full text-white cursor-pointer"
+          className="bg-primary flex items-center px-4 md:px-8 h-full text-white cursor-pointer"
           style={{ clipPath: "polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%)" }}
         >
           <Dropdown menu={{ items }} trigger={["click"]}>
