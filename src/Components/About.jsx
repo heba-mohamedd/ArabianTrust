@@ -61,7 +61,18 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInLeft}
-          className="relative flex justify-center mx-auto w-full max-w-md lg:max-w-lg overflow-hidden rounded-2xl"
+          className="
+    relative 
+    flex 
+    justify-center 
+    mx-auto 
+    w-full 
+    max-w-sm 
+    sm:max-w-md 
+    lg:max-w-lg 
+    overflow-hidden 
+    rounded-2xl
+  "
         >
           <img
             src={Image}
@@ -72,20 +83,26 @@ export default function About() {
           {/* Play Icon */}
           <div
             className="
-      absolute 
-      bottom-0 right-2 
-      w-19 h-19 
-      bg-primary 
-      rounded-full 
-      flex items-center justify-center 
-      cursor-pointer 
-      hover:scale-110 
+      absolute
+      bottom-0 right-0
+     
+
+      w-14 h-14
+      sm:w-16 sm:h-16
+      lg:w-19 lg:h-19
+
+      bg-primary
+      rounded-full
+      flex items-center justify-center
+      cursor-pointer
+
+      hover:scale-110
       active:scale-95
       transition-all
       shadow-lg
     "
           >
-            <IoPlayCircleOutline className="text-white " size={40} />
+            <IoPlayCircleOutline className="text-white" size={28} />
           </div>
         </motion.div>
       </div>

@@ -1,29 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { Dropdown, Space } from "antd";
 import { GlobalOutlined, DownOutlined } from "@ant-design/icons";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import logo from "/Logo.png";
 import { LuDot } from "react-icons/lu";
 
+// Navigation links data
+const navLinks = [
+  { name: "الرئيسية", href: "/" },
+  { name: "القطاعات", href: "/sectors" },
+  { name: "القوائم المالية", href: "/financial" },
+  { name: "الشـهـادات", href: "/certificates" },
+  { name: "خدمات تكامل الانظمة", href: "/system-integration" },
+  { name: "ادارة المرافق", href: "/facility-management" },
+  { name: "من نحن", href: "/about-us" },
+  { name: "تواصل معنا", href: "/contact-us" },
+];
+
 const Navbar = () => {
   const navigate = useNavigate();
-  const [isClick, setIsClick] = useState("الرئيسية");
+  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const items = [
     { key: "1", label: "English" },
     { key: "2", label: "العربية" },
   ];
 
-  const navLinks = [
-    { name: "الرئيسية", href: "/" },
-    { name: "القطاعات", href: "/sectors" },
-    { name: "القوائم المالية ", href: "/financial" },
-    { name: "الشـهـادات", href: "/certificates" },
-    { name: "خدمات تكامل الانظمة", href: "/system-integration" },
-    { name: "ادارة المرافق", href: "/facility-management" },
-    { name: "من نحن", href: "/about-us" },
-    { name: "تواصل معنا", href: "/contact-us" },
-  ];
+  const activeLink = useMemo(() => {
+    const currentLink = navLinks.find(
+      (link) => link.href === location.pathname
+    );
+    return currentLink ? currentLink.name : "الرئيسية";
+  }, [location.pathname]);
 
   return (
     <nav
@@ -44,9 +53,8 @@ const Navbar = () => {
           <li key={index} className="flex items-center gap-2">
             <NavLink
               to={link.href}
-              onClick={() => setIsClick(link.name)}
               className={`hover:text-primary transition-colors flex justify-center items-center ${
-                isClick === link.name ? "text-primary" : ""
+                activeLink === link.name ? "text-primary" : ""
               } `}
             >
               <LuDot className="shrink-0 mt-1" size={24} />
@@ -90,12 +98,9 @@ const Navbar = () => {
               <li key={index}>
                 <NavLink
                   to={link.href}
-                  onClick={() => {
-                    setIsClick(link.name);
-                    setMobileMenuOpen(false);
-                  }}
+                  onClick={() => setMobileMenuOpen(false)}
                   className={`block py-2 px-3 rounded transition-colors ${
-                    isClick === link.name
+                    activeLink === link.name
                       ? "text-primary bg-green-50"
                       : " hover:bg-gray-50"
                   }`}
