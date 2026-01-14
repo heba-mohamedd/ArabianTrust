@@ -36,26 +36,26 @@ const Navbar = () => {
 
   return (
     <nav
-      className="flex items-center justify-between bg-white h-16 md:h-20  shadow-sm "
+      className="flex items-center justify-between bg-white h-16 md:h-20 shadow-sm"
       dir="rtl"
     >
-      <div className="shrink-0">
+      <div className="shrink-0 order-1">
         <img
           onClick={() => navigate("/")}
           src={logo}
           alt="Thibat Logo"
-          className="h-12 md:h-15 w-20 md:w-25  cursor-pointer"
+          className="h-12 md:h-15 w-20 md:w-25 cursor-pointer"
         />
       </div>
 
-      <ul className="hidden lg:flex items-center gap-4 xl:gap-6 text-dark-grey font-medium text-sm xl:text-base">
+      <ul className="hidden order-2 lg:flex items-center gap-4 xl:gap-6 text-dark-grey font-medium text-sm xl:text-base">
         {navLinks.map((link, index) => (
           <li key={index} className="flex items-center gap-2">
             <NavLink
               to={link.href}
-              className={`hover:text-primary transition-colors flex justify-center items-center ${
-                activeLink === link.name ? "text-primary" : ""
-              } `}
+              className={`flex justify-center items-center transition-colors ${
+                activeLink === link.name ? "text-primary" : "hover:text-primary"
+              }`}
             >
               <LuDot className="shrink-0 mt-1" size={24} />
               {link.name}
@@ -65,18 +65,16 @@ const Navbar = () => {
       </ul>
 
       <button
-        className="lg:hidden text-2xl text-dark-grey"
+        className="lg:hidden text-2xl text-dark-grey order-2"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
       >
         ☰
       </button>
 
-      <div className="relative flex items-center h-full">
+      <div className="relative flex items-center h-full order-3">
         <div
           className="bg-[#009640] hidden md:flex items-center px-4 md:px-8 h-full text-white cursor-pointer"
-          style={{
-            clipPath: "polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%)",
-          }}
+          style={{ clipPath: "polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%)" }}
         >
           <Dropdown menu={{ items }} trigger={["click"]}>
             <Space className="hover:opacity-80 transition-opacity text-xs md:text-base">
@@ -90,7 +88,7 @@ const Navbar = () => {
 
       {mobileMenuOpen && (
         <div
-          className="absolute top-16 left-0 right-0 bg-white border-b text-dark-grey  lg:hidden shadow-md z-50"
+          className="absolute top-16 left-0 right-0 bg-white border-b text-dark-grey lg:hidden shadow-md z-50"
           dir="rtl"
         >
           <ul className="flex flex-col p-4 space-y-3">
@@ -102,7 +100,7 @@ const Navbar = () => {
                   className={`block py-2 px-3 rounded transition-colors ${
                     activeLink === link.name
                       ? "text-primary bg-green-50"
-                      : " hover:bg-gray-50"
+                      : "hover:bg-gray-50"
                   }`}
                 >
                   {link.name}
