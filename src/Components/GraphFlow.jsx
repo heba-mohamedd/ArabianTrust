@@ -435,7 +435,7 @@ const HubNode = () => {
   const handleCount = systemsData.length;
 
   return (
-    <div className="relative w-32 h-32">
+    <div className="relative w-32 h-32 ">
       {Array.from({ length: handleCount }).map((_, i) => {
         const angle = (i * 360) / handleCount - 90;
         const rad = (angle * Math.PI) / 180;
@@ -490,7 +490,7 @@ const Flow = () => {
     const rad = (angle * Math.PI) / 180;
     return {
       x: 700 + radius * Math.cos(rad),
-      y: 350 + radius * Math.sin(rad),
+      y: 250 + radius * Math.sin(rad),
     };
   };
 
@@ -498,7 +498,7 @@ const Flow = () => {
     {
       id: "hub",
       type: "hubNode",
-      position: { x: 700, y: 350 },
+      position: { x: 700, y: 250 },
       draggable: false,
     },
     ...systemsData.map((sys, i) => {
@@ -523,7 +523,7 @@ const Flow = () => {
   }));
 
   return (
-    <div className="w-full h-[600px]">
+    <div className="w-full h-[500px]">
       <ReactFlow
         nodes={nodes}
         edges={edges}

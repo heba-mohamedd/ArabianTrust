@@ -75,17 +75,17 @@ export default function SystemIntegration() {
               description="نقدم حلول تكامل أنظمة متقدمة تربط بين التقنيات المختلفة داخل منشآتكم، لضمان تشغيل ذكي، آمن، ومستدام وفق أعلى المعايير المعتمدة."
             />
           </div>
-
-          <motion.div
-            variants={bounceVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <GraphFlow />
-          </motion.div>
         </motion.div>
-
+      </div>
+      <motion.div
+        variants={bounceVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <GraphFlow />
+      </motion.div>
+      <div className="container max-w-7xl mx-auto px-4">
         <div>
           <Header title="أنظمة المراقبة والكاميرات الأمنية" />
 
@@ -160,6 +160,7 @@ export default function SystemIntegration() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="my-10"
         >
           <RequestQuote
             title="خلّي أنظمتك تشتغل مع بعض… مش كل نظام لوحده"

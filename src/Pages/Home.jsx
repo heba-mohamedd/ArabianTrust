@@ -16,14 +16,16 @@ export default function Home() {
       <About />
       <OurService />
       <Statistics />
-      <RequestQuote
-        onClick={handleClick}
-        title="تقديم طلب عرض سعر"
-        description={`من خلال نموذج طلب عرض السعر، يمكنكم مشاركة متطلباتكم الفنية والتشغيلية
+      <div className="mt-10 w-full ">
+        <RequestQuote
+          onClick={handleClick}
+          title="تقديم طلب عرض سعر"
+          description={`من خلال نموذج طلب عرض السعر، يمكنكم مشاركة متطلباتكم الفنية والتشغيلية
         \n ليقوم فريقنا بدراستها وإعداد عرض سعر متكامل`}
-        buttonText="طلب عرض السعر"
-        buttonIcon={<MdOutlinePhoneInTalk size={20} />}
-      />
+          buttonText="طلب عرض السعر"
+          buttonIcon={<MdOutlinePhoneInTalk size={20} />}
+        />
+      </div>
       <Clients />
     </section>
   );

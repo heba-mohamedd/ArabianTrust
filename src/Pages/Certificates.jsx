@@ -82,6 +82,7 @@ export default function Certificates() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
+          className="my-10"
         >
           <RequestQuote
             description="نعمل وفق نموذج تشغيلي معتمد يضمن الكفاءة والاستمرارية في مختلف القطاعات. تواصلوا معنا لمناقشة فرص التعاون واستكشاف الحلول المناسبة لأعمالكم."

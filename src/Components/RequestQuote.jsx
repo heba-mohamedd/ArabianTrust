@@ -9,7 +9,7 @@ export default function RequestQuote({
   onClick,
 }) {
   return (
-    <section className="container mx-auto my-10 px-4">
+    <section className="container mx-auto px-4">
       <div
         className="
           relative

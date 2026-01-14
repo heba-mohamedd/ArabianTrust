@@ -11,9 +11,8 @@ const FinancialTimeline = () => {
   ];
 
   return (
-    <div className="p-10  flex items-center  justify-center">
+    <div className="mt-7   flex items-center  justify-center">
       <Timeline
-        className="custom-timeline"
         items={yearsData.map((item, index) => ({
           icon: (
             <motion.div
@@ -41,16 +40,6 @@ const FinancialTimeline = () => {
           ),
         }))}
       />
-
-      <style>{`
-        .ant-timeline .ant-timeline-item-tail {
-          border-inline-start: 10px solid #20c766 !important;
-          inset-inline-start: 18px !important;
-        }
-        .ant-timeline .ant-timeline-item-head {
-          background: transparent;
-        }
-      `}</style>
     </div>
   );
 };

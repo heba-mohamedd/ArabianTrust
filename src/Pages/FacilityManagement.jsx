@@ -11,6 +11,7 @@ import SecondImage from "../assets/FacilityManagementImages/Frame 8738.png";
 import ThirdImage from "../assets/FacilityManagementImages/Frame 8739.png";
 import ElectricImage from "../assets/FacilityManagementImages/electricCarousel.png";
 import PlumbingImage from "../assets/FacilityManagementImages/Frame 8764.png";
+import Header from "../Components/ui/Header.jsx";
 
 // Data
 const imageFirstSection = [FirstImage, SecondImage, ThirdImage];
@@ -106,15 +107,13 @@ const IntroSection = () => (
     whileInView={{ y: 0, opacity: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.6 }}
-    className="max-w-3xl mb-12"
+    className="mb-10"
   >
-    <p className="text-primary text-3xl md:text-4xl font-bold mb-4">
-      خدمات إدارة المرافق
-    </p>
-    <p className="text-dark-grey leading-relaxed text-lg">
-      نقدم حلول إدارة مرافق متكاملة تضمن كفاءة التشغيل، استدامة الأصول،
-      والالتزام بالمعايير التشغيلية في مختلف أنواع المنشآت.
-    </p>
+    <Header
+      title="خدمات إدارة المرافق"
+      description="   نقدم حلول إدارة مرافق متكاملة تضمن كفاءة التشغيل، استدامة الأصول،
+      والالتزام بالمعايير التشغيلية في مختلف أنواع المنشآت."
+    />
   </motion.div>
 );
 

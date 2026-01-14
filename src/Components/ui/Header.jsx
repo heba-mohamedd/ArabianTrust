@@ -2,7 +2,7 @@ export default function Header({ title, description, titleColor = "" }) {
   return (
     <div className=" flex flex-col items-center justify-center text-center  gap-3 md:gap-3 px-4">
       <p
-        className={` text-3xl font-semibold ${
+        className={`text-xl md:text-2xl font-semibold ${
           titleColor ? titleColor : "text-primary"
         }`}
       >
